@@ -1,8 +1,4 @@
-const solution = sides => {
-  let side = 0;
-  side = sides.sort((a, b) => {
-    return b - a;
-  });
-  return side[0] < side[1] + side[2] ? 1 : 2;;
+function solution(sides) {
+    sides = sides.sort((a,b) => a-b)
+    return sides[0] + sides[1] > sides[2] ? 1 : 2 
 }
-
