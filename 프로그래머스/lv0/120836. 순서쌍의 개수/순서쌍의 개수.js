@@ -1,8 +1,10 @@
 function solution(n) {
-    const result = []
-    for (let i=1; i <=n; i++) {
-        if (n % i ===0) result.push(i)
-    } return result.length
+    let count = 0;
+    for (let i=1; i <= n; i++) {
+        if (n % i ===0) {
+            count += 1
+        }
+    } return count
 }
 
 // 1부터 for문을 돌려 나머지가 0인 수를 찾는다. 
