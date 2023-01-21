@@ -1,9 +1,4 @@
 function solution(my_string) {
-    let answer = [];
-    for (x of my_string) {
-        if (x === x.toUpperCase()) {
-            answer += x.toLowerCase() 
-        } else answer+= x.toUpperCase()
-    } return answer
+    return my_string.split('').map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
 }
     
