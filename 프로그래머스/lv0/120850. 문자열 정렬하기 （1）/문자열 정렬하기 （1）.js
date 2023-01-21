@@ -2,9 +2,7 @@ function solution(my_string) {
     let aaa = /[^0-9]/g;
     let newArr = my_string.replace(aaa, "")
     let newArr2 = newArr.split('').sort((a,b) => a-b)
-    for (a of newArr2) {
-        return newArr2.map(a => parseInt(a))
-    }
+    return newArr2.map(a => Number(a))
 }
                      
 // 문자열만 없애는 정규식을 구글링해서 적용한 뒤 선언
