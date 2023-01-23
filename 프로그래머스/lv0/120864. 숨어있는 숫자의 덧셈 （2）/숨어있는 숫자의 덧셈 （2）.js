@@ -1,20 +1,14 @@
 function solution(my_string) {
-    let array = []
-    for(let x=0; x<my_string.length; x++){
-        let num = Number(my_string[x]);
-        let idx = 0;
-        if(!Number.isInteger(num)) continue;
-
-        while(Number.isInteger(Number(my_string[x+idx]))){
-            idx++;
+    let result = 0
+    for(let i = 0 ; i < my_string.length;i++) {
+        // 이번 반복의 연속되는 숫자를 문자열로 취득
+        let thisNum = ''
+        while(!Number.isNaN(Number(my_string[i]))) {
+            thisNum+= my_string[i]
+            i++
         }
-        const cut = my_string.slice(x,x+idx);
-        array.push(Number(my_string.slice(x,x+idx)))
-        x+=idx
+        // 문자가 온 경우 취득되었던 숫자를 Number형으로 변환 후 result에 더함
+        result+= +thisNum
     }
-    // console.log(array)
-    if(array == false) return 0;
-    return array.reduce((acc,res)=> acc += res)
+    return result
 }
-    
-  
