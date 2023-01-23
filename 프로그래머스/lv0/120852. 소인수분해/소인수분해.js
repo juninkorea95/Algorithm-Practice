@@ -1,19 +1,15 @@
 function solution(n) {
-    let prime = [];
+    var answer = [];
 
-    for (let i = 2; i <= Math.sqrt(n); i++) {
+    for(let i = 2; i <= n; i++) {
+
         while (n % i === 0) {
-            prime.push(i);
-            
-            n /= i;
+
+            n = n / i;
+            answer.push(i);
+
         }
     }
-    
-    if(n >= 2){
-        prime.push(n);    
-    }
-    
-    let ans = Array.from(new Set(prime));
-    
-    return ans.sort((a,b) => a - b);
+
+    return [...new Set(answer)];
 }
