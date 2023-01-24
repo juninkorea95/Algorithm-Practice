@@ -1,3 +1,5 @@
+
+
 function solution(n) {
     let result = 0;
  
@@ -15,3 +17,5 @@ function solution(n) {
     
     return result;
 }
+
+// 다시해라.........
