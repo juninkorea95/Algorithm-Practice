@@ -1,17 +1,5 @@
 function solution(my_string) {
-    const splited = my_string.split(" ");
-    
-    let ans = Number(splited[0]);
-    
-    splited.forEach((item, index) => {
-        if(item === "+"){
-            ans += Number(splited[index + 1]);
-        }
-        
-        if(item === "-"){
-            ans -= Number(splited[index + 1]);
-        }
-    })
-    
-    return ans;
+    const arr = my_string.split(' ')
+    while(arr.length > 1) arr.unshift(+arr.shift() + (arr.shift() === "+" ? 1 : -1) * arr.shift())
+    return arr[0]
 }
