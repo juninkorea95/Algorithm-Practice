@@ -17,3 +17,6 @@ function solution(n) {
 
     return min / 6;
 }
+
+
+// // 다시 연습!!!
