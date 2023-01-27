@@ -3,8 +3,8 @@ function solution(n) {
     let A = n.toString().split('')
     let Arr = A.map(x =>parseInt(x))
     for (i=Arr.length-1; i>=0; i--) {
-        answer.push(A[i])
-    } return answer.map(x=>parseInt(x))
+        answer.push(Arr[i])
+    } return answer
 }
 
 // 숫자를 문자열화 시켜서 스플릿
