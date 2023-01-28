@@ -6,7 +6,7 @@ function solution(lottos, win_nums) {
     const zeros = lottos.filter(x => x===0).length;
     
     let min = 7 - correct >= 6 ? 6 : 7 - correct
-    let max = min - zeros < 1 ? 1 : min - zeros
+    let max = min - zeros <= 1 ? 1 : min - zeros
     
     answer = [max, min]
     return answer
