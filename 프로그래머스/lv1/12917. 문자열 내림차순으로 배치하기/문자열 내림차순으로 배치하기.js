@@ -15,3 +15,15 @@ function solution(s) {
     }).join('')
     return (newArr + newArr2)
 }
+
+// function solution(s) {
+//   return s
+//     .split("")
+//     .sort()
+//     .reverse()
+//     .join("");
+//     console.log(s)
+// }
+
+// 메소드 기본기 사용의 정석 같은 문제다!! 잘 복습하자! 
+
