@@ -1,10 +1,10 @@
-// function solution(arr, divisor) {
-//     let Arr = arr.sort((a,b) => a-b)
-//     let Answer = arr.filter (x => (x % divisor ===0))
-//     if (Answer.length == 0) {
-//         Answer.push(-1)
-//     } return Answer
-// }
+function solution(arr, divisor) {
+    let Arr = arr.sort((a,b) => a-b)
+    let Answer = arr.filter (x => (x % divisor ===0))
+    if (Answer.length == 0) {
+        Answer.push(-1)
+    } return Answer
+}
 
 
 // sort를 이용해 오름차순 정렬
@@ -21,9 +21,7 @@ function solution(arr, divisor) {
     for (let i =0; i < arr.length; i++) {
         (arr[i]%divisor===0) ? answer.push(arr[i]) : []
     } 
-    if (answer.length === 0) {
-        answer.push(-1)
-    }
+    if (answer.length === 0) {answer.push(-1)}
         return answer.sort((a,b) =>a-b)
 }
 
