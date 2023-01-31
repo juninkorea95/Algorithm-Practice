@@ -1,22 +1,22 @@
 // 1번 풀이) 시간초과
 
-// function solution(n) {
-//     let answer = 0;
-//     for (let i=2; i <= n; i++) {
-//         if (test(i)) {
-//             answer++
-//         }
-//     } return answer
-// }
+function solution(n) {
+    let answer = 0;
+    for (let i=2; i <= n; i++) {
+        if (test(i)) {
+            answer++
+        }
+    } return answer
+}
 
-// function test(x) {
-//     let prac = [];
-//     for (i=2; i < x; i++) {
-//         if (x % i == 0) {
-//             prac.push(i)
-//         } 
-//     } if(prac.length === 0) return true
-// } 
+function test(x) {
+    let prac = [];
+    for (i=2; i < Math.sqrt(x); i++) {
+        if (x % i === 0) {
+            prac.push(i)
+        } 
+    } if (prac.length === 0) return true
+} 
 
 // 2번 풀이 ) 모르겠음...
 
