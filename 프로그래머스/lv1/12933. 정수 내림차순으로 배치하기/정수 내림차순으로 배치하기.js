@@ -3,8 +3,10 @@ function solution(n) {
     let Arr = A.map(x => parseInt(x))
     let newArr = A.sort((a,b) =>b-a)
     let Answer = newArr.join('')
-    return Number(Answer)
+    return +Answer
 }
+
+// console.log(solution(118372)) // 출력!!
 
 // 문자로 만들고 스플릿 하고 
 // 맵으로 문자열화 된걸 다시 숫자의 배열로
