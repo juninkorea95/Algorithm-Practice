@@ -14,9 +14,14 @@
 
 function solution(k, m, score) {
     let answer = 0;
-    const sortedScore = score.slice().sort((a, b) => a - b).slice(score.length % m);
+    const sortedScore = score.sort((a, b) => a - b).slice(score.length % m);
     for (let i = 0; i < sortedScore.length; i += m) {
         answer += sortedScore[i] * m;
     }
     return answer;
 }
+
+// function solution(k,m,score) {
+//     let answer = 0;
+//     console.log(score.slice())
+// }
