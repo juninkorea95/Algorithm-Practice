@@ -1,3 +1,3 @@
 function solution(arr, k) {
-   return (k % 2 === 0) ? arr.map(x => x+k) : arr.map(x => k * x)
+   return (k % 2 === 1) ? arr.map(x => x * k ) : arr.map(x => x + k) 
 }
